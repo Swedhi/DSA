@@ -7,17 +7,17 @@ class Solution {
                 int j=i+1;
                 int k=n-1;
                 while(j<k){
-                    int currentSum= nums[i]+nums[j]+nums[k];
+                    int currSum= nums[i]+nums[j]+nums[k];
 
-                    if(Math.abs(target-currentSum)<Math.abs(target-closestSum)){
-                        closestSum=currentSum;
+                    if(Math.abs(target-currSum)<Math.abs(target-closestSum)){
+                        closestSum=currSum;
                     }
-                    if(currentSum<target){
+                    if(currSum<target){
                         j++;
-                    }else if(currentSum>target){
+                    }else if(currSum>target){
                         k--;
                     }else{
-                        return currentSum;
+                        return currSum;
                     }
                 }
         }
